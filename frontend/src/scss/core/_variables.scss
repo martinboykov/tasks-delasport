@@ -1,0 +1,76 @@
+@import './mixins';
+
+// breakpoints
+
+$min: 32rem;
+$sm: 57.6rem;
+$md: 76.8rem;
+$lg: 96rem;
+$xl: 120rem;
+
+$spacer: 1rem;
+$header-height: 7.6rem;
+// Font families
+$font-default: 'Roboto', sans-serif;
+$headings-font-family: $font-default;
+
+// Font size
+$font-size-root: null !default;
+$font-size-base: 1.6rem !default; // typically 1rem when browser default, typically `16px`
+$font-size-base-mobile: 2rem !default;
+
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-bolder: bolder !default;
+
+$font-weight-base: $font-weight-normal !default;
+
+$line-height-base: 1.5 !default;
+
+// Line heights
+$lh-condensed-ultra: 1 !default;
+$lh-condensed: 1.25 !default;
+$lh-default: 1.5 !default;
+
+// colors
+$colors: (
+    green: #22d56d,
+    bg-lightest: #30373f,
+    bg-light: #232a34,
+    bg-dark: #1a212b,
+    text-light: #fff,
+    text-dark: #cecece,
+    red: #c1303d,
+    orange: #ed9438,
+    blue: #176192,
+    purple: #938be1,
+    baige: #7e5b3f,
+    brown: #5d4f4e,
+);
+
+$btn-primary: map-get($colors, green);
+$btn-secondary: map-get($colors, bg-lightest);
+
+$text-primary: map-get($colors, text-dark);
+$text-secondary: map-get($colors, text-light);
+
+$bg-main: map-get($colors, bg-light);
+$bg-header: map-get($colors, bg-dark);
+$bg-header: map-get($colors, bg-dark);
+
+$red: map-get($colors, red);
+$orange: map-get($colors, orange);
+$blue: map-get($colors, blue);
+$purple: map-get($colors, purple);
+$baige: map-get($colors, baige);
+$brown: map-get($colors, brown);
+
+$font-size-article-title: 2.4rem;
+$font-size-section-title: 2rem;
+$font-size-button: 1.6rem;
+$font-size-buttons-article: 1.4rem;
+$font-size-text: 1.4rem;
+$font-size-icons: 1.1rem;
+$font-size-partners: 1.3rem;
+
+$icon-colors: 'red', 'orange', 'blue', 'purple', 'baige', 'brown';

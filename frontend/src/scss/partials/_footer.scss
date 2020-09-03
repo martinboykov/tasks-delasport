@@ -1,0 +1,79 @@
+.footer {
+    .container {
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 2.5rem 3rem;
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            height: 1px;
+            width: calc(100% - 6rem);
+            background-color: $btn-secondary;
+        }
+    }
+    .wrapper {
+        width: auto;
+        &.big {
+            width: 22rem;
+            .logo {
+                margin-bottom: 3rem;
+                display: inline-block;
+                img {
+                    margin: 0;
+                    width: 15.5rem;
+                }
+            }
+            .text {
+                max-width: 25ch;
+                line-height: $lh-condensed;
+            }
+        }
+        &.small,
+        &.social {
+            width: 16rem;
+            .title {
+                font-size: $font-size-text;
+                margin-bottom: 3rem;
+            }
+            ul {
+                li {
+                    margin-bottom: 0.2rem;
+                    a {
+                        &:hover,
+                        &:focus {
+                            color: lighten($text-primary, 15%);
+                        }
+                    }
+                }
+            }
+        }
+        &.social {
+            width: auto;
+            .tab {
+                display: grid;
+                place-items: center;
+                width: 3.8rem;
+                height: 3.8rem;
+                margin-right: 0.8rem;
+                border-radius: 50%;
+                background-color: $btn-secondary;
+                &:active {
+                    transform: translateY(0.1rem);
+                }
+                &:last-child {
+                    margin-right: 0;
+                }
+                [class^='icon-']:before {
+                    font-size: 2rem;
+                }
+                .icon-instagram:before {
+                    color: $text-secondary;
+                }
+            }
+        }
+    }
+}

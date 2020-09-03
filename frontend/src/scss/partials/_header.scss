@@ -1,0 +1,25 @@
+.header {
+    background-color: $bg-header;
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: $header-height;
+    }
+    .logo img {
+        width: 15.5rem;
+    }
+    .btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 13rem;
+        [class^='icon-'] {
+            margin-bottom: 0.5rem;
+        }
+        [class^='icon-']:before {
+            font-size: 1rem;
+            color: $text-primary;
+        }
+    }
+}

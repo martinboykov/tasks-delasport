@@ -1,0 +1,133 @@
+@import './mixins';
+/* Global styles */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 62.5%; // 10px/ 1rem
+}
+
+body {
+    height: 100%;
+    margin: 0;
+
+    font-family: $font-default;
+    font-size: 1.4rem;
+    font-weight: $font-weight-normal;
+    line-height: $lh-default;
+
+    color: $text-primary;
+    background-color: $bg-main;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    &:hover,
+    &:active {
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+p {
+    margin: 0;
+}
+// Lists
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+// Custom Classes
+.container {
+    width: 100%;
+    max-width: $xl;
+    margin: 0 auto;
+    padding: 0rem 3rem;
+    @include transition(padding);
+}
+.content-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: hidden;
+}
+
+a.btn {
+    display: inline-block;
+    line-height: 4.3rem;
+    &.btn-article {
+        line-height: 3.5rem;
+    }
+}
+.btn {
+    height: 4.3rem;
+    padding: 0 4.3rem;
+    font-size: $font-size-button;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    &.btn-primary,
+    &.btn-article {
+        background-color: $btn-primary;
+        color: $text-primary;
+        &:hover,
+        &:focus {
+            background-color: darken($btn-primary, 15%);
+        }
+        &:disabled {
+            background-color: lighten($btn-primary, 15%);
+            cursor: auto;
+        }
+    }
+    &.btn-article {
+        width: fit-content;
+        height: 3.5rem;
+        padding: 0 3.3rem;
+        font-size: $font-size-buttons-article;
+    }
+    &.btn-secondary {
+        background-color: $btn-secondary;
+        color: $text-secondary;
+        border: 1px solid $btn-secondary;
+        &:hover,
+        &:focus {
+            background-color: darken($btn-secondary, 7%);
+            border: 1px solid $btn-secondary;
+        }
+        &:disabled {
+            background-color: lighten($btn-secondary, 15%);
+            border: 1px solid lighten($btn-secondary, 15%);
+            cursor: auto;
+        }
+    }
+    &.btn-header {
+        padding: 0 1.5rem;
+        border: 1px solid $btn-secondary;
+        background-color: transparent;
+        color: $text-primary;
+        &:hover,
+        &:focus {
+            border: 1px solid $text-primary;
+        }
+        &:disabled {
+            border: 1px solid transparent;
+            cursor: auto;
+        }
+    }
+}
